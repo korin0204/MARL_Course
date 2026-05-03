@@ -1,0 +1,22 @@
+{
+  "student_id": "bomber_actor_critic_student",
+  "model_name": "bomber_actorcritic_1000000",
+  "out": "outputs/bomber_actor_critic_student",
+  "episodes": 1000000,
+  "seed": 0,
+  "gamma": 0.99,
+  "lr": 0.0003,
+  "value_coef": 0.5,
+  "entropy_coef": 0.01,
+  "epsilon_start": 0.0,
+  "epsilon_end": 0.0,
+  "epsilon_decay_rate": 8.0,
+  "hidden_dim": 256,
+  "use_cnn": true,
+  "device": "auto",
+  "wandb": false,
+  "wandb_project": "marl-course-games",
+  "gif_steps": 200,
+  "gif_fps": 16,
+  "gif_tile_size": 16
+}

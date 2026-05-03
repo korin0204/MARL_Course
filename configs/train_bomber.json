@@ -1,0 +1,17 @@
+{
+  "student_id": "bomber_student",
+  "model_name": "bomber_qlearning_200",
+  "out": "outputs/bomber_student",
+  "episodes": 200,
+  "seed": 0,
+  "alpha": 0.25,
+  "gamma": 0.97,
+  "epsilon_start": 0.4,
+  "epsilon_end": 0.02,
+  "epsilon_decay_rate": 8.0,
+  "wandb": false,
+  "wandb_project": "marl-course-games",
+  "gif_steps": 160,
+  "gif_fps": 30,
+  "gif_tile_size": 16
+}

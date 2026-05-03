@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marl-course-games"
+version = "0.1.0"
+description = "MARL teaching environments for competitive bomber arena and cooperative kitchen games."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy>=1.24",
+  "gymnasium>=0.29",
+  "pettingzoo>=1.24",
+  "torch>=2.1",
+  "pygame>=2.5",
+  "matplotlib>=3.7",
+  "imageio>=2.31",
+  "tqdm>=4.66",
+  "pydantic>=2",
+  "pyyaml>=6",
+  "tensorboard>=2.14",
+]
+
+[project.optional-dependencies]
+train = ["wandb>=0.16", "pandas>=2.0"]
+dev = ["pytest>=7.4"]
+# Macのdevice確認ではpsutilがあるとメモリ容量も記録できる。なくても学習は動く。
+mac = ["psutil>=5.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
